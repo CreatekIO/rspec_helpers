@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.email       = 'contact@createk.io'
   s.files       = [
     "lib/rspec_helpers.rb",
+    "lib/rspec_helpers/ck_editor_helper.rb",
     "lib/rspec_helpers/selectize_helper.rb",
     "lib/rspec_helpers/sweet_alert_helper.rb"
   ]
