@@ -1,5 +1,5 @@
 module RspecHelpers
-  module SweetAlertHelpers
+  module SweetAlertHelper
     def sweet_alert_ok
       within ".sweet-alert.visible" do
         expect(page).to have_css('.sweet-alert button.confirm', :count => 1)
