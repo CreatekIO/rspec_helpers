@@ -1,6 +1,6 @@
 module RspecHelpers
   module CkEditorHelpers
-    def fill_in_ckeditor(locator, opts)
+    def ckeditor_fill_in(locator, opts)
       content = opts.fetch(:with).to_json
       page.execute_script <<-SCRIPT
       CKEDITOR.instances['#{locator}'].setData(#{content});
