@@ -1,5 +1,5 @@
 module RspecHelpers
-  module CkEditorHelpers
+  module CkEditorHelper
     def ckeditor_fill_in(locator, opts)
       content = opts.fetch(:with).to_json
       page.execute_script <<-SCRIPT
