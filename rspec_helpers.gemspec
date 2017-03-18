@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name        = 'rspec_helpers'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2017-02-23'
-  s.summary     = "Rspec Helpers"
-  s.description = "RSpec and Capybara helpers"
+  s.summary     = "Capybara Helpers"
+  s.description = "Capybara helpers for JS plug-ins
   s.authors     = ["Createk"]
   s.email       = 'contact@createk.io'
   s.files       = [
