@@ -12,9 +12,9 @@ or add it to your `Gemfile`. Then, add the following to your `rails_helper`
 
 ```ruby
 RSpec.configure do |config|
-  config.include RspecHelpers::SweetAlertHelper, js: :true
-  config.include RspecHelpers::SelectizeHelper, js: true
-  config.include RspecHelpers::CkEditorHelper, js: true
+  config.include CapybaraJsHelpers::SweetAlertHelper, js: :true
+  config.include CapybaraJsHelpers::SelectizeHelper, js: true
+  config.include CapybaraJsHelpers::CkEditorHelper, js: true
 end
 ```
 

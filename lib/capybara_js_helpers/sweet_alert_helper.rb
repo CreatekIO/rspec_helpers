@@ -1,4 +1,4 @@
-module RspecHelpers
+module CapybaraJsHelpers
   module SweetAlertHelper
     def sweet_alert_ok
       within ".sweet-alert.visible" do
