@@ -1,6 +1,6 @@
-# cabybara_helpers
+# cabybara_js_helpers
 
-**capybara_helpers** is a gem that provides a number of Capybara helper methods for common JavaScript libraries such 
+**capybara_js_helpers** is a gem that provides a number of Capybara helper methods for common JavaScript libraries such 
 as CKEditor, Selectize and SweetAlert. 
 
 ### Installation 
@@ -8,7 +8,7 @@ as CKEditor, Selectize and SweetAlert.
 gem install 'capybara_helpers'
 ```
 
-or add it to your `Gemfile`. Then, add the following to your `rails_helper`
+or add it to your `Gemfile`. Then, add the following to your `rspec_helpers.rb`
 
 ```ruby
 RSpec.configure do |config|
