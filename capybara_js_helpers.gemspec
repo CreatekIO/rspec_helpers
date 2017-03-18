@@ -3,7 +3,7 @@ Gem::Specification.new do |s|
   s.version     = '0.0.2'
   s.date        = '2017-02-23'
   s.summary     = "Capybara JavaScript Helpers"
-  s.description = "Capybara helpers for JS plug-ins
+  s.description = "Capybara helpers for JS plug-ins"
   s.authors     = ["Createk"]
   s.email       = 'contact@createk.io'
   s.files       = [
