@@ -4,8 +4,8 @@ module CapybaraJsHelpers
       content = opts.fetch(:with).to_json
       page.execute_script <<-SCRIPT
       $(function() {
-        CKEDITOR.instances['#{locator}'].setData(#{content});
-        $('textarea##{locator}').text(#{content});
+        CKEDITOR.instances['#{locator}'].setData('#{content}');
+        $('textarea##{locator}').text('#{content}');
       });
       SCRIPT
     end
