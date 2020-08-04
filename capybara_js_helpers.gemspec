@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'capybara_js_helpers'
-  s.version     = '0.0.4'
-  s.date        = '2017-02-23'
+  s.version     = '0.0.5'
+  s.date        = '2020-08-04'
   s.summary     = "Capybara JavaScript Helpers"
   s.description = "Capybara helpers for JS plug-ins"
   s.authors     = ["Createk"]
