@@ -3,32 +3,18 @@ require 'capybara_js_helpers/sweet_alert_helper.rb'
 require 'capybara_js_helpers/ck_editor_helper.rb'
 
 module CapybaraJsHelpers
-  # Adapted from action_view/helpers/javascript_helper.rb
-  JS_ESCAPE_MAP = {
-    '\\'    => '\\\\',
-    "</"    => '<\/',
-    "\r\n"  => '\n',
-    "\n"    => '\n',
-    "\r"    => '\n',
-    '"'     => '\\"',
-    "'"     => "\\'",
-    "`"     => "\\`",
-    "$"     => "\\$"
-  }
+  def self.execute_script(javascript, **variables)
+    definitions = []
+    arguments = []
 
-  JS_ESCAPE_MAP[(+"\342\200\250").force_encoding(Encoding::UTF_8).encode!] = "&#x2028;"
-  JS_ESCAPE_MAP[(+"\342\200\251").force_encoding(Encoding::UTF_8).encode!] = "&#x2029;"
+    variables.each_with_index do |(var, value), index|
+      definitions << "var #{var} = arguments[#{index}];"
+      arguments << value
+    end
 
-  def self.escape_javascript(javascript)
-    javascript = javascript.to_s
-    return "" if javascript.empty?
-
-    javascript.gsub(/(\\|<\/|\r\n|\342\200\250|\342\200\251|[\n\r"']|[`]|[$])/u, JS_ESCAPE_MAP)
-  end
-
-  def self.execute_script(javascript, **interpolations)
     Capybara.current_session.execute_script(
-      escape_javascript(javascript % interpolations)
+      "#{definitions.join("\n")}\n#{javascript}",
+      *arguments
     )
   end
 end
