@@ -1,4 +1,4 @@
-module RspecHelpers
+module CapybaraJsHelpers
   module SelectizeHelper
     def selectize_add_item(selector, item_value)
       selectize_exec(selector, "addItem('#{item_value}')")
